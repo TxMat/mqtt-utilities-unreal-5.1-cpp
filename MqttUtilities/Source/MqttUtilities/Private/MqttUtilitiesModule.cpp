@@ -27,8 +27,9 @@ void FMqttUtilitiesModule::StartupModule()
 
 #if PLATFORM_WINDOWS
 
-	const FString PluginDir = IPluginManager::Get().FindPlugin(TEXT("MqttUtilities"))->GetBaseDir();
-	const FString DLLPath = PluginDir / TEXT("Binaries/Win64/");
+	//const FString PluginDir = IPluginManager::Get().FindPlugin(TEXT("MqttUtilities"))->GetBaseDir();
+	const FString PluginDir = IPluginManager::Get().FindPlugin(TEXT("VEventCore"))->GetBaseDir();
+	const FString DLLPath = PluginDir / TEXT("Source/UnrealPlugins/MqttUtilities/Binaries/Win64/");
 
 	FPlatformProcess::PushDllDirectory(*DLLPath);
 

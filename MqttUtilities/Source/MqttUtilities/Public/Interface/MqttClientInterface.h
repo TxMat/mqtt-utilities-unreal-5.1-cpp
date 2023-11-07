@@ -13,6 +13,7 @@
 DECLARE_DYNAMIC_DELEGATE(FOnConnectDelegate);
 DECLARE_DYNAMIC_DELEGATE(FOnDisconnectDelegate);
 DECLARE_DYNAMIC_DELEGATE_OneParam(FOnPublishDelegate, int, mid);
+// might use const reference to FMqttMessage instead of copy
 DECLARE_DYNAMIC_DELEGATE_OneParam(FOnMessageDelegate, FMqttMessage, message);
 DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnSubscribeDelegate, int, mid, const TArray<int>&, qos);
 DECLARE_DYNAMIC_DELEGATE_OneParam(FOnUnsubscribeDelegate, int, mid);

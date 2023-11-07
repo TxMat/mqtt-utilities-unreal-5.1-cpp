@@ -24,7 +24,7 @@ void MqttClientImpl::on_connect(int rc)
 }
 
 void MqttClientImpl::on_disconnect(int rc)
-{
+	{
 	if (rc != 0)
 	{
 		return;

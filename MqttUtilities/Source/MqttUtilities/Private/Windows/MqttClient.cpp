@@ -9,6 +9,7 @@
 
 void UMqttClient::BeginDestroy()
 {
+	UE_LOG(LogTemp, Warning, TEXT("MQTT => BeginDestroy ?????????"));
 	UMqttClientBase::BeginDestroy();
 
 	if (Task != nullptr) 
